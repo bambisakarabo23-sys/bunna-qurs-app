@@ -63,42 +63,4 @@ app.get('/', (req, res) => {
         </div>
 
         <div class="container">
-            <h2>🎧 Listen to Episodes</h2>
-            <div id="podcast-list"></div>
-
-            <h2 style="margin-top: 50px;">☕ Cafe Favorites</h2>
-            <div id="menu-list"></div>
-        </div>
-
-        <script>
-            fetch('/api/data')
-                .then(res => res.json())
-                .then(data => {
-                    // Load Podcasts
-                    document.getElementById('podcast-list').innerHTML = data.episodes.map(ep => \`
-                        <div class="card">
-                            <h3 style="margin:0">\${ep.title}</h3>
-                            <small style="color:#888">\${ep.date}</small><br>
-                            <audio controls src="\${ep.audioUrl}"></audio>
-                        </div>
-                    \`).join('');
-
-                    // Load Menu
-                    document.getElementById('menu-list').innerHTML = data.menu.map(item => \`
-                        <div class="menu-item">
-                            <div>
-                                <strong>\${item.name}</strong><br>
-                                <small style="color:#888">\${item.desc}</small>
-                            </div>
-                            <div class="price">\${item.price}</div>
-                        </div>
-                    \`).join('');
-                });
-        </script>
-    </body>
-    </html>
-  `);
-});
-
-app.listen(PORT, () => console.log('Bunna Qurs is running!'));
-
+        
