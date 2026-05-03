@@ -36,7 +36,7 @@ app.get('/admin', (req, res) => {
       <button onclick="edit('${i.id}')" style="background:#d4af37;border:none;padding:8px 15px;border-radius:5px;font-weight:bold;cursor:pointer;">Update</button>
     </div>`).join('');
   
-  res.send(\`<html><body style="background:#121212;color:white;font-family:sans-serif;padding:20px;">
+  res.send(\<html><body style="background:#121212;color:white;font-family:sans-serif;padding:20px;">
     <h1 style="color:#d4af37">Admin Dashboard</h1>
     <p>Update prices here to change the live site.</p>
     \${menuHtml}
