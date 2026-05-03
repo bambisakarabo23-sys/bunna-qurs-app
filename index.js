@@ -108,7 +108,7 @@ app.get('/', (req, res) => {
                 }
             }
         </script>
-    </body></html>\`);
+    </body></html>\);
 });
 
 app.listen(PORT, () => console.log("Ready"));
